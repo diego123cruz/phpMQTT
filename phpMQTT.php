@@ -202,7 +202,7 @@ class phpMQTT {
 			$this->topics[$key] = $topic; 
 		}
 
-		$cmd = 0x80;
+		$cmd = 0x82;
 		//$qos
 		$cmd +=	($qos << 1);
 
@@ -392,7 +392,7 @@ class phpMQTT {
 		  $len = $len >> 7;
 		  // if there are more digits to encode, set the top bit of this digit
 		  if ( $len > 0 )
-		    $digit = ($digit | 0x80);
+		    $digit = ($digit | 0x82);
 		  $string .= chr($digit);
 		}while ( $len > 0 );
 		return $string;
